@@ -1,12 +1,21 @@
-#python test_dummy_list.py $CIRCLECI_USERNAME
-
-import os
-import sys
-
-username = sys.argv[1]
-sms = os.environ["smes"].split(",")
-
-if username in sms:
-   print("Username " + username + " exists in sme list")
-else:
-   print("Username " + username + " DOES NOT exists in sme list")
+version: 2.1
+orbs: 
+  aws-auth: cardig/aws-auth@1.3.0
+executors:
+  python_executor:
+    docker:
+      - image: cimg/python:3.9.13
+jobs:
+  SME_code_review: 
+    executor: python_executor
+    steps:
+      - checkout
+      - run: echo "SME COde Review"
+      - run:
+          name: SME_Script
+          command: |
+            python sme_script.py
+workflows:
+  bt_workflow:
+    jobs:
+      - SME_code_review
