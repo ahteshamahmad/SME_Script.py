@@ -3,7 +3,7 @@
 import os
 import sys
 
-username = sys.argv[0]
+username = sys.argv[1]
 sms = os.environ["smes"].split(",")
 
 if username in sms:
