@@ -3,7 +3,7 @@
 import os
 import sys
 
-username = sys.argv[1]
+username = sys.argv[0]
 sms = os.environ["User_List"].split(",")
 user_list = os.environ.get("User_List")
 if not user_list:
