@@ -1,6 +1,6 @@
 import os
 import sys
-username = os.environ.get("USER")
+username = os.environ["USER"]
 sms = os.environ["USER_LIST"].split(",")
 print(username)
 print(sms)
