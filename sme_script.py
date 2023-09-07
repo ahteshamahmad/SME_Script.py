@@ -1,7 +1,7 @@
 import os
 import sys
-username = sys.argv[1]
-sms = os.environ["User_List"].split(",")
+username = os.environ.get("USER")
+sms = os.environ["USER_LIST"].split(",")
 
 if username in sms:
    print("Username " + username + " exists in sme list")
