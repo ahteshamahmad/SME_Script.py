@@ -10,6 +10,9 @@ jobs:
     executor: python_executor
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "92:a6:10:18:dd:37:46:90:aa:f5:0a:ba:36:dd:d8:46"
       - run: echo "SME COde Review"
       - run:
           name: SME_Script
