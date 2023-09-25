@@ -17,8 +17,8 @@ jobs:
           name: Test SSH Key Access
           command: |
             # Replace 'your-username' with the actual SSH username
-#            ssh -i $HOME/.ssh/id_rsa ec2-user@ip-172-31-39-58 echo "Server 1 SSH Access Successful"
-            ssh -i $HOME/.ssh/id_rsa ec2-user@ip-172-31-34-85 echo "Server 2 SSH Access Successful"
+           # ssh -i $HOME/.ssh/id_rsa ec2-user@ip-172-31-39-58 echo "Server 1 SSH Access Successful"
+            ssh -i .ssh/id_rsa ec2-user@ip-172-31-34-85 echo "Server 2 SSH Access Successful"
       - run: echo "SME COde Review"
       - run:
           name: SME_Script
