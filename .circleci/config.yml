@@ -24,7 +24,11 @@ jobs:
             python sme_script.py
 workflows:
   bt_workflow:
+    when:
+      or:
+        - equal: [input, << pipeline.parameters.env_var >>]
     jobs:
       - SME_code_review
+      
 
       
