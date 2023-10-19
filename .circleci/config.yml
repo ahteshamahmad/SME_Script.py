@@ -5,6 +5,10 @@ executors:
   python_executor:
     docker:
       - image: cimg/python:3.9.13
+parameters:
+  env_var:
+    type: string
+    default: "None"
 jobs:
   SME_code_review: 
     executor: python_executor
