@@ -13,12 +13,6 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "92:a6:10:18:dd:37:46:90:aa:f5:0a:ba:36:dd:d8:46"
-      - run:
-          name: Test SSH Key Access
-          command: |
-            # Replace 'your-username' with the actual SSH username
-            ssh -i .ssh/id_rsa ec2-user@ip-172-31-39-58 echo "Server 1 SSH Access Successful"
-            ssh -i .ssh/id_rsa ec2-user@ip-172-31-34-85 echo "Server 2 SSH Access Successful"
       - run: echo "SME COde Review"
       - run:
           name: SME_Script
