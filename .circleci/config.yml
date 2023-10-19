@@ -22,6 +22,7 @@ jobs:
           name: SME_Script
           command: |
             python sme_script.py
+            echo "Script run successfully"
 workflows:
   bt_workflow:
     when:
