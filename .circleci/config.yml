@@ -22,7 +22,7 @@ jobs:
           name: SME_Script
           command: |
             python sme_script.py
-            echo "Script run successfully and you can see the status of the  build with two condition satisfied"
+            echo "Script run successfully and you can see the status of the  build"
 workflows:
   bt_workflow:
     when:
