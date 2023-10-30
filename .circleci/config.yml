@@ -28,6 +28,7 @@ workflows:
     when:
       or:
         - equal: [input, << pipeline.parameters.env_var >>]
+        - equal: [dev, << pipeline.git.branch >>]
     jobs:
       - SME_code_review
       
