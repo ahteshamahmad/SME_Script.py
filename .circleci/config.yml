@@ -28,7 +28,7 @@ workflows:
     when:
       and:
         - equal: [input, << pipeline.parameters.env_var >>]
-        - equal: [feature/SME-2, << pipeline.git.branch >>]
+        - equal: [feature/*, << pipeline.git.branch >>]
     jobs:
       - SME_code_review
       
