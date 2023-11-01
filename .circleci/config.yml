@@ -29,11 +29,11 @@ workflows:
       and:
         - equal: [input, << pipeline.parameters.env_var >>]
     jobs:
-      - SME_code_review
+      - SME_code_review:
     filters:
       branches:
         only:
-          - /feature.*/
+          - main
 
       
 
