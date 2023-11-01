@@ -30,13 +30,6 @@ workflows:
         - equal: [input, << pipeline.parameters.env_var >>]
     jobs:
       - SME_code_review
-    version: 2.1
-workflows:
-  sandbox_workflow:
-    jobs:
-      - build:
-          context:
-            - IIT_SANDBOX_WF
     filters:
       branches:
         only:
