@@ -1,7 +1,7 @@
 import os
 import sys
 username = os.environ.get("CIRCLE_USER").strip()  # Remove leading/trailing spaces
-sms = [s.strip() for s in os.environ["USER_LIST"].split(",")]  # Remove leading/trailing spaces from each element
+sms = [s.strip() for s in os.environ["USER_LIST"].split(",")]  # Remove leading/trailing spaces from each element for SME
 print(username)
 print(sms)
 
